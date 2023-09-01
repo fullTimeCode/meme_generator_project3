@@ -1,4 +1,7 @@
 export default function Meme() {
+  function handleClick(e) {
+    console.log(e)
+  }
   return (
     <form
       method='POST'
@@ -15,7 +18,11 @@ export default function Meme() {
         className=''
         placeholder='Bottom Text'
       />
-      <button type='submit'>Generate</button>
+      <button
+        type='submit'
+        onClick={handleClick}>
+        Generate
+      </button>
     </form>
   )
 }
